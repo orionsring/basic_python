@@ -1,0 +1,10 @@
+
+
+sales = open('fruitsales.csv', 'r')
+column_names = sales.readline().split(',')
+for line in sales.readlines():
+    items = line.split(',')
+    print('On {0} you sold {1} {2} and {3} {4}'
+        .format(items[0], items[1], column_names[1],
+            items[2], column_names[2]))
+
